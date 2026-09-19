@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #08111f;
+  --foreground: #e7edf5;
+  --muted: #91a0b4;
+  --accent: #f4b860;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Trebuchet MS", sans-serif;
+  --font-mono: "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
