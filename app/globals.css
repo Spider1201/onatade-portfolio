@@ -22,6 +22,55 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Trebuchet MS", sans-serif;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+html[data-theme="light"] {
+  --background: #f4f7fb;
+  --foreground: #172235;
+  --muted: #52647c;
+  --accent: #b86b16;
+}
+
+html[data-theme="light"] body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+html[data-theme="light"] .text-white {
+  color: #172235;
+}
+
+html[data-theme="light"] .text-\[\#91a0b4\] {
+  color: #52647c;
+}
+
+html[data-theme="light"] .text-\[\#d7e0eb\] {
+  color: #34465e;
+}
+
+html[data-theme="light"] [class*="bg-[#0b1829"] {
+  background-color: #ffffff;
+}
+
+html[data-theme="light"] [class*="bg-[#08111f"] {
+  background-color: #eef2f7;
+}
+
+html[data-theme="light"] [class*="border-white"] {
+  border-color: rgba(23, 34, 53, 0.14);
+}
+
+html[data-theme="light"] [class*="shadow-black"] {
+  --tw-shadow-color: rgba(23, 34, 53, 0.12);
+}
+
+html[data-theme="light"] .hover\:text-white:hover {
+  color: #172235;
+}
+
+html[data-theme="light"] .placeholder\:text-\[\#91a0b4\]::placeholder {
+  color: #718198;
 }
 
 html {
