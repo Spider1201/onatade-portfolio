@@ -16,7 +16,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a href="#projects" className="group inline-flex items-center gap-3 bg-[#f4b860] px-5 py-3 text-sm font-bold text-[#08111f] transition hover:bg-white">View Projects <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
             <a href="#contact" className="inline-flex items-center gap-3 border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-[#f4b860] hover:text-[#f4b860]">Get in Touch</a>
-            <a href="/resume.pdf" download className="inline-flex items-center gap-2 px-3 py-3 text-sm text-[#91a0b4] transition hover:text-white"><Download size={16} /> Resume</a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download="Onatade-Abdulmajeed-Resume.pdf" className="inline-flex items-center gap-2 px-3 py-3 text-sm text-[#91a0b4] transition hover:text-white"><Download size={16} /> Resume</a>
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="hidden border-l border-white/10 pl-8 lg:block">

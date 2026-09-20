@@ -1,4 +1,5 @@
 import { BookOpen, Clock3, ExternalLink } from "lucide-react";
+import Image from "next/image";
 import { articleSlugs } from "@/data/articles";
 
 type DevToArticle = {
@@ -58,7 +59,9 @@ export async function Articles() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {article.cover_image ? (
-                    <img src={article.cover_image} alt="" className="h-48 w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image src={article.cover_image} alt="" fill loading="lazy" sizes="(min-width: 1024px) 384px, (min-width: 768px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-[1.03]" />
+                    </div>
                   ) : (
                     <div className="h-48 w-full bg-[radial-gradient(circle_at_25%_20%,rgba(244,184,96,0.32),transparent_35%),linear-gradient(135deg,#12243a,#0b1829)]" aria-hidden="true" />
                   )}
@@ -69,7 +72,7 @@ export async function Articles() {
                       <span className="inline-flex items-center gap-1.5"><Clock3 size={13} /> {article.reading_time_minutes} min read</span>
                     </div>
                     <h3 className="mt-4 text-xl font-bold leading-snug tracking-[-0.02em] text-white">{article.title}</h3>
-                    <a href={article.url} target="_blank" rel="noreferrer" className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold text-[#f4b860] transition hover:text-white">
+                    <a href={article.url} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold text-[#f4b860] transition hover:text-white">
                       <BookOpen size={16} aria-hidden="true" />
                       Read on Dev.to
                       <ExternalLink size={14} aria-hidden="true" />

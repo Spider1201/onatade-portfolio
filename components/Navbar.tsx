@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -9,10 +10,19 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
+  const [themeReady, setThemeReady] = useState(false);
 
   useEffect(() => {
+    const storedTheme = window.localStorage.getItem("theme");
+    if (storedTheme) setDark(storedTheme !== "light");
+    setThemeReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!themeReady) return;
     document.documentElement.dataset.theme = dark ? "dark" : "light";
-  }, [dark]);
+    window.localStorage.setItem("theme", dark ? "dark" : "light");
+  }, [dark, themeReady]);
 
   useEffect(() => {
     const sections = ["home", ...links.map((link) => link.toLowerCase())]
@@ -32,8 +42,8 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <nav className="mx-auto flex max-w-6xl items-center justify-between border border-white/10 bg-[#0b1829]/85 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-xl sm:px-6">
-        <a href="#home" className="font-mono text-sm font-bold tracking-tight text-white" onClick={() => setOpen(false)}>
-          OA<span className="text-[#f4b860]">.</span>
+        <a href="#home" aria-label="Onatade Abdulmajeed home" className="transition duration-200 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.45)]" onClick={() => setOpen(false)}>
+          <Image src="/logo.png" alt="Onatade Abdulmajeed logo" width={40} height={40} className="h-10 w-auto object-contain" priority />
         </a>
         <div className="hidden items-center gap-7 md:flex">
           {links.map((link) => (

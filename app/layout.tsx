@@ -3,17 +3,40 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "Onatade Abdulmajeed | Full-Stack Software Developer",
   description:
-    "Portfolio of Onatade Abdulmajeed, a full-stack software developer building thoughtful digital products.",
+    "Full-Stack Developer specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
   openGraph: {
     title: "Onatade Abdulmajeed | Full-Stack Software Developer",
     description:
-      "Explore the work and writing of Onatade Abdulmajeed.",
+      "Full-Stack Developer specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
     type: "website",
+    images: [{ url: "/logo.png", width: 1280, height: 1280, alt: "Onatade Abdulmajeed logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Onatade Abdulmajeed | Full-Stack Software Developer",
+    description: "Full-Stack Developer specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
+    images: ["/logo.png"],
+  },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
   },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return <html lang="en" className="h-full"><body className="min-h-full">{children}</body></html>;
+  return (
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try { var theme = localStorage.getItem("theme"); document.documentElement.dataset.theme = theme === "light" ? "light" : "dark"; } catch (error) { document.documentElement.dataset.theme = "dark"; }`,
+          }}
+        />
+      </head>
+      <body className="min-h-full">{children}</body>
+    </html>
+  );
 }

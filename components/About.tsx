@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Camera, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 const highlights = [
   "6+ Projects Shipped",
@@ -40,17 +41,8 @@ export function About() {
 
         <div className="relative mx-auto w-full max-w-sm">
           <div className="absolute -inset-3 rounded-[2rem] border border-[#f4b860]/10" />
-          <div className="relative flex aspect-[4/5] items-end overflow-hidden rounded-3xl border border-white/10 bg-[#0b1829] shadow-2xl shadow-black/25">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(244,184,96,0.16),transparent_38%)]" />
-            <div className="relative flex w-full items-center justify-center pb-12 text-center">
-              <div>
-                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#f4b860]/30 bg-[#f4b860]/10 text-[#f4b860]">
-                  <Camera size={25} strokeWidth={1.5} aria-hidden="true" />
-                </div>
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#d7e0eb]">Professional photo</p>
-                <p className="mt-2 text-sm text-[#91a0b4]">Coming soon</p>
-              </div>
-            </div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-[#0b1829] shadow-2xl shadow-black/25">
+            <Image src="/profile.jpg" alt="Onatade Abdulmajeed" fill loading="lazy" sizes="(min-width: 1024px) 360px, (min-width: 640px) 384px, 100vw" className="object-cover" />
           </div>
         </div>
       </motion.div>
