@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { BookOpen, ExternalLink, Github, Server } from "lucide-react";
 import { projects } from "@/data/projects";
 
 const cardVariants = {
@@ -61,7 +61,7 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              {(project.githubUrl || project.liveUrl) && (
+              {(project.githubUrl || project.liveUrl || project.apiUrl || project.docsUrl) && (
                 <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
                   {project.githubUrl && (
                     <a href={project.githubUrl} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub repository`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
@@ -71,6 +71,16 @@ export function Projects() {
                   {project.liveUrl && (
                     <a href={project.liveUrl} target="_blank" rel="noreferrer" aria-label={`${project.title} live demo`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
                       <ExternalLink size={18} />
+                    </a>
+                  )}
+                  {project.apiUrl && (
+                    <a href={project.apiUrl} target="_blank" rel="noreferrer" aria-label={`${project.title} API`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
+                      <Server size={18} />
+                    </a>
+                  )}
+                  {project.docsUrl && (
+                    <a href={project.docsUrl} target="_blank" rel="noreferrer" aria-label={`${project.title} API documentation`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
+                      <BookOpen size={18} />
                     </a>
                   )}
                 </div>
