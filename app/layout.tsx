@@ -6,18 +6,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "Onatade Abdulmajeed | Full-Stack Software Developer",
   description:
-    "Full-Stack Developer specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
+    "Full-Stack Developer, technical writer, and developer relations professional specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
   openGraph: {
     title: "Onatade Abdulmajeed | Full-Stack Software Developer",
     description:
-      "Full-Stack Developer specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
+      "Full-Stack Developer, technical writer, and developer relations professional specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
     type: "website",
     images: [{ url: "/logo.png", width: 1280, height: 1280, alt: "Onatade Abdulmajeed logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Onatade Abdulmajeed | Full-Stack Software Developer",
-    description: "Full-Stack Developer specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
+    description: "Full-Stack Developer, technical writer, and developer relations professional specializing in Java/Spring Boot and TypeScript/React, based in Lagos, Nigeria.",
     images: ["/logo.png"],
   },
   icons: {
