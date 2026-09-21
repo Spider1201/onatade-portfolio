@@ -12,6 +12,9 @@ export function Hero() {
           <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-[#f4b860]">Available for thoughtful collaborations</p>
           <h1 className="max-w-4xl text-5xl font-bold leading-[0.98] tracking-[-0.05em] text-white sm:text-7xl lg:text-8xl">Onatade<br /><span className="text-[#f4b860]">Abdulmajeed</span></h1>
           <p className="mt-8 max-w-xl text-xl font-medium text-[#d7e0eb] sm:text-2xl">Full-Stack Software Developer</p>
+          <motion.a href="#articles" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.5 }} className="mt-5 inline-flex rounded-full border border-[#f4b860]/35 bg-[#f4b860]/10 px-4 py-2 font-mono text-xs text-[#f4b860] shadow-[0_0_18px_rgba(244,184,96,0.12)] transition hover:border-[#f4b860] hover:bg-[#f4b860]/15 hover:shadow-[0_0_24px_rgba(244,184,96,0.25)]">
+            <span aria-hidden="true">📅 </span>Day 93 of #100DaysOfCode — Week 14
+          </motion.a>
           <p className="mt-4 max-w-lg text-base leading-7 text-[#91a0b4]">I turn complex ideas into clear, reliable digital experiences, from the first line of code to the last interaction.</p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a href="#projects" className="group inline-flex items-center gap-3 bg-[#f4b860] px-5 py-3 text-sm font-bold text-[#08111f] transition hover:bg-white">View Projects <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
