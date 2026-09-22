@@ -34,6 +34,12 @@ export async function Articles() {
     .filter((result): result is PromiseFulfilledResult<CuratedArticle | null> => result.status === "fulfilled")
     .map((result) => result.value)
     .filter((article): article is CuratedArticle => article !== null);
+  const chronologicalJourney = [...journeyArticles].sort(
+    (first, second) => new Date(first.published_at).getTime() - new Date(second.published_at).getTime(),
+  );
+  const journeySelection = chronologicalJourney.length <= 6
+    ? chronologicalJourney
+    : [...chronologicalJourney.slice(0, 3), ...chronologicalJourney.slice(-3)];
 
   return (
     <section id="articles" className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
@@ -44,7 +50,7 @@ export async function Articles() {
           <p className="mt-5 max-w-2xl text-base leading-7 text-[#91a0b4]">Notes from building software, learning in public, and navigating the details behind reliable systems.</p>
         </div>
 
-        {journeyArticles.length > 0 && (
+        {journeySelection.length > 0 && (
           <div className="articles-reveal mt-14" style={{ animationDelay: "100ms" }}>
             <div className="flex flex-wrap items-end justify-between gap-5">
               <div>
@@ -57,7 +63,7 @@ export async function Articles() {
               </div>
             </div>
             <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:overflow-visible">
-              {journeyArticles.map((article, index) => (
+              {journeySelection.map((article, index) => (
                 <a key={article.url} href={article.url} target="_blank" rel="noopener noreferrer" className="group articles-reveal min-w-[min(82vw,21rem)] snap-start border border-[#f4b860]/20 bg-[#0b1829]/70 p-5 shadow-xl shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-[#f4b860]/50 hover:shadow-2xl hover:shadow-black/25 lg:min-w-0" style={{ animationDelay: `${150 + index * 75}ms` }}>
                   <div className="flex items-center justify-between gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#f4b860]"><span>{getJourneyReference(article.title)}</span><ExternalLink size={14} aria-hidden="true" /></div>
                   <h4 className="mt-5 line-clamp-3 text-lg font-bold leading-snug text-white">{article.title}</h4>
@@ -65,6 +71,10 @@ export async function Articles() {
                 </a>
               ))}
             </div>
+            <a href="https://dev.to/onatade_abdulmajeed" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-[#f4b860] transition hover:text-white">
+              View all posts
+              <ExternalLink size={14} aria-hidden="true" />
+            </a>
           </div>
         )}
 
