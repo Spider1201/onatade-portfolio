@@ -17,7 +17,7 @@ export function Hero() {
           </motion.a>
           <p className="mt-4 max-w-lg text-base leading-7 text-[#91a0b4]">I turn complex ideas into clear, reliable digital experiences, from the first line of code to the last interaction.</p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a href="#projects" className="group inline-flex items-center gap-3 bg-[#f4b860] px-5 py-3 text-sm font-bold text-[#08111f] transition hover:bg-white">View Projects <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
+            <a href="#projects" className="hero-project-cta group inline-flex items-center gap-3 border border-[#f4b860]/60 bg-[#f4b860] px-5 py-3 text-sm font-bold text-[#08111f] transition duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-[#ffd38a] hover:text-[#08111f] hover:shadow-[0_8px_24px_rgba(244,184,96,0.2)]">View Projects <ArrowUpRight size={16} className="transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
             <a href="#contact" className="inline-flex items-center gap-3 border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-[#f4b860] hover:text-[#f4b860]">Get in Touch</a>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download="Onatade-Abdulmajeed-Resume.pdf" className="inline-flex items-center gap-2 px-3 py-3 text-sm text-[#91a0b4] transition hover:text-white"><Download size={16} /> Resume</a>
           </div>

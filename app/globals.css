@@ -78,6 +78,19 @@ html[data-theme="light"] [class*="hover:bg-white"]:hover {
   color: #ffffff;
 }
 
+html[data-theme="light"] .hero-project-cta {
+  background-color: #b86b16;
+  border-color: #8a4b00;
+  color: #ffffff;
+}
+
+html[data-theme="light"] .hero-project-cta:hover {
+  background-color: #172235;
+  border-color: #172235;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 34, 53, 0.2);
+}
+
 html[data-theme="light"] [class*="hover:border-[#f4b860"]:hover {
   border-color: #8a4b00;
 }
