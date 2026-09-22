@@ -26,9 +26,14 @@ export function About() {
           <h2 className="max-w-xl text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl">
             I design, build, and deploy reliable software — end to end.
           </h2>
-          <p className="mt-7 max-w-2xl text-base leading-8 text-[#91a0b4]">
-            I&apos;m a Full-Stack Developer based in Lagos, Nigeria, with hands-on experience designing, building, and maintaining scalable, secure software across both client and server. I work comfortably across Java/Spring Boot and JavaScript/TypeScript/Node.js, with a track record of shipping clean APIs, integrating payment gateways (Paystack, Monnify), and collaborating with product and design teams to deliver reliable applications end-to-end. I care about writing well-tested, well-documented code and enjoy solving real organizational problems — currently exploring FinTech, EdTech, and Web3. I also write about what I build — technical breakdowns, challenges, and lessons — because I believe good documentation and knowledge-sharing are as important as good code.
-          </p>
+          <div className="mt-7 max-w-2xl space-y-5 text-base leading-8 text-[#91a0b4]">
+            <p>I&apos;m a software engineer from Lagos, Nigeria, with a strong focus on backend development.</p>
+            <p>My journey into software engineering started with learning how to build applications, but over time I became more interested in what happens behind the scenes — how systems are designed, how APIs communicate, how data is managed, and how applications are tested, deployed, and kept reliable.</p>
+            <p>Most of what I&apos;ve learned has come from building things. I&apos;ve worked on projects ranging from REST APIs and payment integrations to crowdfunding platforms, deployment pipelines, and full-stack applications. Some projects went smoothly. Others involved bugs, failed deployments, confusing errors, and technologies I had never used before. Those experiences taught me to get comfortable with figuring things out instead of giving up when I don&apos;t immediately have the answer.</p>
+            <p>Today, I work mainly with Java and Spring Boot, alongside technologies such as JavaScript/TypeScript, React, Node.js, PostgreSQL, MongoDB, Docker, and REST APIs. I&apos;m particularly interested in backend engineering, distributed systems, software testing, and building applications that can actually be used in the real world.</p>
+            <p>I also believe that building software is only part of becoming a good engineer. I document what I learn, share my mistakes and lessons publicly, and constantly try to improve how I communicate technical ideas. My #100DaysOfCode journey has been a big part of that — showing up consistently, learning difficult topics, building projects, and sharing the process along the way.</p>
+            <p>I&apos;m still learning, still building, and still figuring things out — but that&apos;s exactly what I enjoy about software engineering. If there&apos;s a real problem to solve, I want to build my way toward the answer.</p>
+          </div>
           <div className="mt-8 flex flex-wrap gap-2.5" aria-label="Professional highlights">
             {highlights.map((highlight) => (
               <span key={highlight} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 font-mono text-xs text-[#d7e0eb]">
