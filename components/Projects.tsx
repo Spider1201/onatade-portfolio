@@ -13,6 +13,8 @@ const cardVariants = {
   },
 };
 
+const projectActionClassName = "inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-[#91a0b4] transition duration-200 ease-out hover:scale-105 hover:border-[#f4b860]/60 hover:bg-[#f4b860]/15 hover:text-[#f4b860]";
+
 export function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
@@ -64,22 +66,22 @@ export function Projects() {
               {(project.githubUrl || project.liveUrl || project.apiUrl || project.docsUrl) && (
                 <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
                   {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} GitHub repository`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} GitHub repository`} title="View GitHub repository" className={projectActionClassName}>
                       <Github size={18} />
                     </a>
                   )}
                   {project.liveUrl && (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} live demo`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} live demo`} title="View live demo" className={projectActionClassName}>
                       <ExternalLink size={18} />
                     </a>
                   )}
                   {project.apiUrl && (
-                    <a href={project.apiUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} API`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
+                    <a href={project.apiUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} API`} title="Open API" className={projectActionClassName}>
                       <Server size={18} />
                     </a>
                   )}
                   {project.docsUrl && (
-                    <a href={project.docsUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} API documentation`} className="text-[#91a0b4] transition hover:text-[#f4b860]">
+                    <a href={project.docsUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} API documentation`} title="Read API documentation" className={projectActionClassName}>
                       <BookOpen size={18} />
                     </a>
                   )}
