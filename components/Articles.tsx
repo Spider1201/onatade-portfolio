@@ -52,8 +52,8 @@ export async function Articles() {
                 <h3 className="mt-3 text-2xl font-bold tracking-[-0.03em] text-white sm:text-3xl">#100DaysOfCode Journey</h3>
               </div>
               <div className="w-full max-w-xs">
-                <div className="mb-2 flex items-center justify-between font-mono text-xs uppercase tracking-[0.12em] text-[#91a0b4]"><span>Progress</span><span className="text-[#f4b860]">93/100 days</span></div>
-                <div className="h-1.5 overflow-hidden rounded-full bg-white/10"><div className="h-full w-[93%] rounded-full bg-[#f4b860]" /></div>
+                <div className="mb-2 flex items-center justify-between font-mono text-xs uppercase tracking-[0.12em] text-[#91a0b4]"><span>Progress</span><span className="text-[#f4b860]">94/100 days</span></div>
+                <div className="h-1.5 overflow-hidden rounded-full bg-white/10"><div className="h-full w-[94%] rounded-full bg-[#f4b860]" /></div>
               </div>
             </div>
             <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:overflow-visible">
