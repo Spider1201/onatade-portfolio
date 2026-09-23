@@ -22,11 +22,11 @@ export function About() {
         className="mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20"
       >
         <div>
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#b8791f] dark:text-[#f4b860]">02 / 06 · About me</p>
+          <p className="mb-5 font-mono text-sm uppercase tracking-[0.25em] text-[#6b3a00] dark:text-[#f4b860]">02 / 06 · About me</p>
           <h2 className="max-w-xl text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl">
             I design, build, and deploy reliable software — end to end.
           </h2>
-          <div className="mt-7 max-w-2xl space-y-5 text-base leading-8 text-[#91a0b4]">
+          <div className="mt-7 max-w-2xl space-y-5 text-base leading-8 text-[#52647c] dark:text-[#91a0b4]">
             <p>I&apos;m a software engineer from Lagos, Nigeria, with a strong focus on backend development.</p>
             <p>My journey into software engineering started with learning how to build applications, but over time I became more interested in what happens behind the scenes — how systems are designed, how APIs communicate, how data is managed, and how applications are tested, deployed, and kept reliable.</p>
             <p>Most of what I&apos;ve learned has come from building things. I&apos;ve worked on projects ranging from REST APIs and payment integrations to crowdfunding platforms, deployment pipelines, and full-stack applications. Some projects went smoothly. Others involved bugs, failed deployments, confusing errors, and technologies I had never used before. Those experiences taught me to get comfortable with figuring things out instead of giving up when I don&apos;t immediately have the answer.</p>
@@ -36,7 +36,7 @@ export function About() {
           </div>
           <div className="mt-8 flex flex-wrap gap-2.5" aria-label="Professional highlights">
             {highlights.map((highlight) => (
-              <span key={highlight} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 font-mono text-xs text-[#d7e0eb]">
+              <span key={highlight} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 font-mono text-xs text-[#34465e] dark:text-[#d7e0eb]">
                 {highlight === "Lagos, Nigeria" && <MapPin size={13} className="text-[#f4b860]" />}
                 {highlight}
               </span>

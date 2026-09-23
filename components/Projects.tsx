@@ -13,7 +13,7 @@ const cardVariants = {
   },
 };
 
-const projectActionClassName = "inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-[#91a0b4] transition duration-200 ease-out hover:scale-105 hover:border-[#f4b860]/60 hover:bg-[#f4b860]/15 hover:text-[#f4b860]";
+const projectActionClassName = "inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-[#52647c] dark:text-[#91a0b4] transition duration-200 ease-out hover:scale-105 hover:border-[#f4b860]/60 hover:bg-[#f4b860]/15 hover:text-[#f4b860]";
 
 export function Projects() {
   return (
@@ -25,11 +25,11 @@ export function Projects() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#b8791f] dark:text-[#f4b860]">04 / 06 · Selected work</p>
+          <p className="mb-5 font-mono text-sm uppercase tracking-[0.25em] text-[#6b3a00] dark:text-[#f4b860]">04 / 06 · Selected work</p>
           <h2 className="max-w-2xl text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl">
             Featured Projects
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[#91a0b4]">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#52647c] dark:text-[#91a0b4]">
             A selection of products and platforms built to solve practical problems with thoughtful engineering.
           </p>
         </motion.div>
@@ -55,10 +55,10 @@ export function Projects() {
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-2xl font-bold tracking-[-0.03em] text-white">{project.title}</h3>
               </div>
-              <p className="mt-5 text-sm leading-7 text-[#91a0b4]">{project.description}</p>
+              <p className="mt-5 text-sm leading-7 text-[#52647c] dark:text-[#91a0b4]">{project.description}</p>
               <div className="mt-auto flex flex-wrap gap-2 pt-8" aria-label={`${project.title} technology stack`}>
                 {project.tech.map((technology) => (
-                  <span key={technology} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-[11px] text-[#d7e0eb]">
+                  <span key={technology} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-[11px] text-[#34465e] dark:text-[#d7e0eb]">
                     {technology}
                   </span>
                 ))}

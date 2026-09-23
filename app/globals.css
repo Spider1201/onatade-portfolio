@@ -80,7 +80,7 @@ html[data-theme="light"] [class*="bg-[#f4b860]/15"] {
 }
 
 html[data-theme="light"] .text-\[\#08111f\] {
-  color: #ffffff;
+  color: #08111f;
 }
 
 html[data-theme="light"] [class*="hover:bg-white"]:hover {
@@ -91,7 +91,7 @@ html[data-theme="light"] [class*="hover:bg-white"]:hover {
 html[data-theme="light"] .hero-project-cta {
   background-color: #b86b16;
   border-color: #8a4b00;
-  color: #ffffff;
+  color: #08111f;
 }
 
 html[data-theme="light"] .hero-project-cta:hover {

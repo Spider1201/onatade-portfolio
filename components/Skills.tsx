@@ -57,11 +57,11 @@ export function Skills() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#b8791f] dark:text-[#f4b860]">03 / 06 · Toolkit</p>
+          <p className="mb-5 font-mono text-sm uppercase tracking-[0.25em] text-[#6b3a00] dark:text-[#f4b860]">03 / 06 · Toolkit</p>
           <h2 className="max-w-2xl text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl">
             Skills &amp; Tech Stack
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[#91a0b4]">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#52647c] dark:text-[#91a0b4]">
             A practical toolkit for building dependable products across the frontend, backend, and infrastructure.
           </p>
         </motion.div>
@@ -79,12 +79,12 @@ export function Skills() {
               variants={cardVariants}
               className="border border-white/10 bg-[#0b1829]/70 p-5 shadow-xl shadow-black/10 transition-colors hover:border-[#f4b860]/25"
             >
-              <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-[#d7e0eb]">{group.name}</h3>
+              <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-[#34465e] dark:text-[#d7e0eb]">{group.name}</h3>
               <div className="mt-4 flex flex-wrap gap-2" aria-label={`${group.name} skills`}>
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-xs text-[#91a0b4] transition duration-200 hover:scale-[1.03] hover:border-[#f4b860]/45 hover:bg-[#f4b860]/10 hover:text-[#f4b860]"
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-xs text-[#52647c] dark:text-[#91a0b4] transition duration-200 hover:scale-[1.03] hover:border-[#f4b860]/45 hover:bg-[#f4b860]/10 hover:text-[#f4b860]"
                   >
                     {skill}
                   </span>
