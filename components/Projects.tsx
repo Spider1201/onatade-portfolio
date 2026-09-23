@@ -25,7 +25,7 @@ export function Projects() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#f4b860]">04 / 06 · Selected work</p>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#b8791f] dark:text-[#f4b860]">04 / 06 · Selected work</p>
           <h2 className="max-w-2xl text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl">
             Featured Projects
           </h2>

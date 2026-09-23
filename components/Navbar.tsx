@@ -21,6 +21,7 @@ export function Navbar() {
   useEffect(() => {
     if (!themeReady) return;
     document.documentElement.dataset.theme = dark ? "dark" : "light";
+    document.documentElement.classList.toggle("dark", dark);
     window.localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark, themeReady]);
 

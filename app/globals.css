@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #08111f;
@@ -16,6 +17,15 @@
 
 * {
   box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
 }
 
 body {
@@ -121,6 +131,23 @@ html[data-theme="light"] .hover\:text-white:hover {
 
 html[data-theme="light"] .placeholder\:text-\[\#91a0b4\]::placeholder {
   color: #718198;
+}
+
+html[data-theme="light"] .hero-journey-badge {
+  background-color: #fff1d8;
+  border-color: #9a5600;
+  color: #6b3900;
+}
+
+html[data-theme="light"] .hero-journey-badge:hover {
+  background-color: #ffe2ad;
+  border-color: #6b3900;
+  color: #4c2800;
+}
+
+html[data-theme="light"] .hero-glow {
+  background-color: rgba(184, 107, 22, 0.025);
+  border-color: rgba(138, 75, 0, 0.08);
 }
 
 html {

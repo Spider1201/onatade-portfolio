@@ -50,7 +50,7 @@ export function Contact() {
         className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"
       >
         <div>
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#f4b860]">06 / 06 · Contact</p>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#b8791f] dark:text-[#f4b860]">06 / 06 · Contact</p>
           <h2 className="max-w-md text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl">Let&apos;s Connect</h2>
           <p className="mt-5 max-w-md text-base leading-7 text-[#91a0b4]">
             Open to new opportunities and interesting projects - reach out anytime.

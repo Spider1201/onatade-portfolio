@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `try { var theme = localStorage.getItem("theme"); document.documentElement.dataset.theme = theme === "light" ? "light" : "dark"; } catch (error) { document.documentElement.dataset.theme = "dark"; }`,
+            __html: `try { var theme = localStorage.getItem("theme"); var isDark = theme !== "light"; document.documentElement.dataset.theme = isDark ? "dark" : "light"; document.documentElement.classList.toggle("dark", isDark); } catch (error) { document.documentElement.dataset.theme = "dark"; document.documentElement.classList.add("dark"); }`,
           }}
         />
       </head>

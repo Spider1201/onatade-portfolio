@@ -22,7 +22,7 @@ export function About() {
         className="mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20"
       >
         <div>
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#f4b860]">02 / 06 · About me</p>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-[#b8791f] dark:text-[#f4b860]">02 / 06 · About me</p>
           <h2 className="max-w-xl text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl">
             I design, build, and deploy reliable software — end to end.
           </h2>
